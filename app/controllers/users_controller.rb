@@ -50,10 +50,7 @@ class UsersController < ApplicationController
             end
 
             @user.save
-            
         end
-
-
 
         # Send them over refer action
         respond_to do |format|
