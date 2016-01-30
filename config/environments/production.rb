@@ -60,7 +60,20 @@ Prelaunchr::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => ENV['DEFAULT_MAILER_HOST'] }
+    config.action_mailer.default_url_options = { :host => 'itsalaunch.herokuapp.com'}
+
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    address: ENV.fetch("SMTP_ADDRESS"),
+    authentication: :plain,
+    domain: ENV.fetch("SMTP_DOMAIN"),
+    enable_starttls_auto: true,
+    password: ENV.fetch("SMTP_PASSWORD"),
+    port: "587",
+    user_name: ENV.fetch("SMTP_USERNAME")
+  }
+
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
