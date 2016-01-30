@@ -50,7 +50,7 @@ class UsersController < ApplicationController
             end
 
             @user.save
-            UserMailer.signup_email(@user).deliver
+            
         end
 
 
