@@ -64,6 +64,11 @@ Prelaunchr::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
 
+  ENV["SMTP_ADDRESS"] = "smtp.mandrillapp.com"
+  ENV["SMTP_DOMAIN"] = "itsalaunch.herokuapp.com"
+  ENV["SMTP_PASSWORD"] = "oviY7qK7BMjrhDQ1QUQd0Q"
+  ENV["SMTP_USERNAME"] = "ccevans1@gmail.com"
+
   config.action_mailer.smtp_settings = {
     address: ENV.fetch("SMTP_ADDRESS"),
     authentication: :plain,
