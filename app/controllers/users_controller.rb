@@ -52,6 +52,8 @@ class UsersController < ApplicationController
             @user.save
         end
 
+        UserMailer.signup_email(@user).deliver
+
         # Send them over refer action
         respond_to do |format|
             if !@user.nil?
