@@ -50,9 +50,10 @@ class UsersController < ApplicationController
             end
 
             @user.save
+            UserMailer.signup_email(@user).deliver
         end
 
-        UserMailer.signup_email(@user).deliver
+
 
         # Send them over refer action
         respond_to do |format|
