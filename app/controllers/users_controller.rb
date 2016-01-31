@@ -1,4 +1,4 @@
-lass UsersController < ApplicationController
+Class UsersController < ApplicationController
     before_filter :skip_first_page, :only => :new
 
     def new
