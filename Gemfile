@@ -14,6 +14,7 @@ gem 'coffee-script-source', '1.8.0'
 gem 'childprocess', '~> 0.5.9'
 gem 'font-awesome-sass'
 
+
 group :assets do
   gem 'coffee-rails', '~> 4.1.0'
   gem 'sass-rails',   '~> 5.0.1'

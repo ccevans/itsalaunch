@@ -12,7 +12,7 @@
         <p class="again brandon">Thank You Again!</p>
     <% else %>
         <div class="key"><i class="fa fa-plug fa-flip-horizontal"></i></div>
-        <p class="byline brandon">Get early access to beta</p>
+        <p class="byline brandon">Get early access to beta<br>Currently available for Charlotte</p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
             <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
             <input class="submit brandon" name="commit" type="submit" value="Plug In" />
