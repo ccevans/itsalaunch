@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+lass UsersController < ApplicationController
     before_filter :skip_first_page, :only => :new
 
     def new
@@ -102,3 +102,4 @@ class UsersController < ApplicationController
     end
 
 end
+
